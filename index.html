@@ -35,7 +35,7 @@
                 placeholder="I tuoi buoni propositi..."
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-outline-success" type="button">
                 Add Tasks
               </button>
             </form>
@@ -44,8 +44,8 @@
 
         <h1>Lista dei Propositi</h1>
         <ol class="list-group list-group-numbered">
-          <li class="list-group-item">
-            A list item
+          <li v-for="task in tasks" class="list-group-item">
+            {{task}}
             <span class="badge bg-primary rounded-pill ms-auto">X</span>
           </li>
         </ol>
