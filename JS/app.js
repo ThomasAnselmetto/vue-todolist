@@ -24,27 +24,42 @@ const myApp = Vue.createApp({
     return {
       tasks: [
         {
-          compiti: "fai compiti di matematica",
+          text: "fai compiti di matematica",
           done: false,
         },
         {
-          pulizie: "pulisci casa",
+          text: "pulisci casa",
           done: false,
         },
         {
-          workout: "esercizi corpo libero",
+          text: "esercizi corpo libero",
+          done: true,
+        },
+        {
+          text: "riorganizza comodino e armadio",
+          done: true,
+        },
+        {
+          text: "riorganizza comodino e armadio",
           done: false,
         },
         {
-          ordinare: "riorganizza comodino e armadio",
-          done: false,
+          text: "riorganizza comodino e armadio",
+          done: true,
         },
       ],
+
+      newTodo: {
+        text: "",
+        done: false,
+      },
     };
   },
 
-  methods() {
-    saluta: salutiDaMe();
+  methods: {
+    removeTodo(index) {
+      this.tasks.splice(index, 1);
+    },
   },
 });
 
